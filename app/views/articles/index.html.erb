@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<div class="container" id="articles">
+  <h1>Artículos de noticias.</h1>
+  <div class="row">
+    <% @articles.each do |article| %>    
+      <div class="col-md-6 col-lg-4">
+        <div class="card">
+          <%= link_to article do %>
+            <div class="card-image">
+              <%= image_tag article.url_img %>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <%=  article.headline %>
+              </div>
+            </div>
+          <% end %> 
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+

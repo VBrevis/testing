@@ -1,0 +1,22 @@
+<div class="container2" id="<%= dom_id article %>">
+
+<div class="col-md-6 col-lg-4">
+  <div class="article-card">
+    <%= image_tag article.url_img %>
+  </div>
+</div>
+
+<div class="article-container">
+      <h2 class="article-headline card-title"><%= article.headline %></h2>
+      <p class="article-lead card-subtitle"><%= article.lead %></p>
+
+    <div class="article-info">
+      <div class="article-meta">
+        <p class="article-author card-text"><%= article.created_at.strftime("Fecha: %d/%m/%Y") %></p>
+        <p class="article-author card-text"><%= article.author %></p>
+      </div>
+      <p class="article-body card-text"><%= article.body %></p>
+    </div>
+  </div>
+
+</div>
